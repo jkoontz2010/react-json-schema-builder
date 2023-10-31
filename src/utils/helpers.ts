@@ -45,9 +45,10 @@ export const deleteSchemaField = _.unset
 export const deleteSchemaProperty = (key: string) =>
   deleteSchemaField(['properties', key])
 
-export const addSchemaProperty = (schema: Schema) =>
-  setSchemaProperty(`__${_.now()}__`)({}, schema)
-
+export const addSchemaProperty = (schema: Schema) => {
+  console.log('addSchemaProperty', { schema })
+  return setSchemaProperty(`__${_.now()}__`)({}, schema)
+}
 export const renameSchemaField = (oldKey: string, newKey: string) =>
   //Rename field key but maintains object "order"
   _.flow([
