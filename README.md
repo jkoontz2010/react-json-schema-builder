@@ -7,7 +7,7 @@
 **[Demo](https://viczaca.github.io/react-json-schema-builder/)**
 
 ## Install
-
+WARNING: this repo is a forked version for personal use. The npm package below belongs to the originator.
 ```bash
 npm install --save react-json-schema-builder
 ```
