@@ -46,8 +46,8 @@ export const deleteSchemaProperty = (key: string) =>
   deleteSchemaField(['properties', key])
 
 export const addSchemaProperty = (schema: Schema) => {
-  console.log('addSchemaProperty', { schema })
-  return setSchemaProperty(`__${_.now()}__`)({}, schema)
+  // console.log('addSchemaProperty', { schema })
+  return setSchemaProperty(schema.title as string)({}, schema)
 }
 export const renameSchemaField = (oldKey: string, newKey: string) =>
   //Rename field key but maintains object "order"
